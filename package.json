@@ -1,6 +1,6 @@
 {
   "name": "@saibweb/saibweb-components",
-  "version": "1.0.1-rc-7",
+  "version": "1.0.1-rc-8",
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
