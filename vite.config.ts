@@ -13,9 +13,10 @@ const config = {
     rules: [
       {
         test: /\.[jt]sx?$/,
-        loader: 'esbuild-loader',
-        options: {
-          target: 'es2015',
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015'],
         },
       },
     ],
