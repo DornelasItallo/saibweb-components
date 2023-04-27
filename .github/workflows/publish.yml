@@ -4,6 +4,9 @@ name: Publish to NPM registry
 on:
   release:
     types: [created]
+  push:
+    branches:
+      - master
 
 jobs:
   publish:
@@ -14,8 +17,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm run build
-      - run: cp package.json dist
-      - run: cd dist && npm publish --access=public
+          registry-url: https://registry.npmjs.org
+      - name: publish
+        run: npm publish --access public
+        working-directory: src
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
