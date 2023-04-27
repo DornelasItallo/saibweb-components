@@ -1,7 +1,9 @@
 {
+  "version": "1.0.1-rc",
+  "description": "Server app that uses the saibweb-components package",
+  "main": "index.js",
+  "license": "MIT",
   "name": "saibweb-components",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
