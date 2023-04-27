@@ -8,11 +8,11 @@ const config = {
       name: '@saibweb/saibweb-components',
     },
   },
-  plugins: [
-    react({
-      include: '**/*.{jsx,tsx}',
-    }),
-  ],
+  plugins: [react()],
+  esbuild: {
+    jsxFactory: 'React.createElement',
+    jsxFragment: 'React.Fragment',
+  },
 };
 
 export default defineConfig(config);
