@@ -1,3 +1,4 @@
+import '../src/styles/globals.css';
 import { SaibWebButton } from './components/SaibWebButton';
 import { SaibWebHeader } from './components/SaibWebHeader';
 import { SaibWebInput } from './components/SaibWebInput';

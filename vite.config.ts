@@ -10,10 +10,7 @@ const config = {
   },
   plugins: [
     react({
-      include: ['./src/**/*.tsx'],
-    }),
-    react({
-      include: ['./node_modules/**/*.svelte'],
+      include: '**/*.{jsx,tsx}',
     }),
   ],
 };
