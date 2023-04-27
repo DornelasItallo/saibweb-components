@@ -1,6 +1,6 @@
-import { Meta, StoryFn } from '@storybook/react';
 import { FormProvider, useForm } from 'react-hook-form';
-import { InputProps, SaibWebInput } from './index';
+
+import { SaibWebInput } from './index';
 
 export default {
   title: 'Components/Form/Input',
@@ -40,14 +40,14 @@ export default {
   args: {
     type: 'text',
   },
-} as Meta;
+};
 
-const Template: StoryFn<InputProps> = (args) => {
+const Template = (args) => {
   const methods = useForm();
 
   return (
     <FormProvider {...methods}>
-      <SaibWebInput label="Label" {...args} />
+      <SaibWebInput label="Label" name="input" {...args} />
     </FormProvider>
   );
 };
