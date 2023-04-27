@@ -8,7 +8,14 @@ const config = {
       name: '@saibweb/saibweb-components',
     },
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      include: ['./src/**/*.tsx'],
+    }),
+    react({
+      include: ['./node_modules/**/*.svelte'],
+    }),
+  ],
 };
 
 export default defineConfig(config);
