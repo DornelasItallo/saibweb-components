@@ -1,3 +1,4 @@
+import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 const config = {
@@ -7,6 +8,7 @@ const config = {
       name: '@saibweb/saibweb-components',
     },
   },
+  plugins: [react()],
 };
 
 export default defineConfig(config);
