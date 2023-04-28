@@ -2,15 +2,15 @@ import { Transition } from '@headlessui/react';
 import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import React from 'react';
 
-interface ModalProps {
-  isOpen: boolean;
-  title?: string;
-  message: string;
-  onConfirm: () => void;
-  onClose: () => void;
-  confirm?: string;
-  cancel?: string;
-}
+// interface ModalProps {
+//   isOpen: boolean;
+//   title?: string;
+//   message: string;
+//   onConfirm: () => void;
+//   onClose: () => void;
+//   confirm?: string;
+//   cancel?: string;
+// }
 
 export function SaibWebModal({
   isOpen,
@@ -20,7 +20,7 @@ export function SaibWebModal({
   onClose,
   confirm = 'Confirmar',
   cancel = 'Cancelar',
-}: ModalProps) {
+}) {
   return (
     <Transition
       className="w-full h-full fixed top-0 left-0 bg-loading flex items-start justify-center z-[999] pt-4"
