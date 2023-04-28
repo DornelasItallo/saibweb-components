@@ -1,6 +1,6 @@
 {
   "name": "@saibweb/saibweb-components",
-  "version": "1.0.1-rc-22",
+  "version": "1.0.1-rc-23",
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-scripts": "^5.0.1",
     "react-toastify": "^9.1.2",
     "vite-tsconfig-paths": "^4.2.0"
   },

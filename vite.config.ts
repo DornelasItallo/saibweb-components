@@ -15,7 +15,7 @@ const config = {
       name: '@saibweb/saibweb-components',
     },
     rollupOptions: {
-      external: ['react'],
+      external: [],
       plugins: [
         typescriptPaths({
           preserveExtensions: true,
