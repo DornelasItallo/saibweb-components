@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { getParseMessageError } from '../../utils/functions';
 
