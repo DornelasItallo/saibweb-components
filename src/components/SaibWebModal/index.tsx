@@ -1,7 +1,6 @@
 import { Transition } from '@headlessui/react';
 import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import React from 'react';
-import { SaibWebButton } from '../SaibWebButton';
 
 interface ModalProps {
   isOpen: boolean;
@@ -42,22 +41,22 @@ export function SaibWebModal({
             {message}
           </span>
           <div className="flex items-center justify-center gap-4 w-full">
-            <SaibWebButton
+            <button
               onClick={onConfirm}
               className="bg-green text-white"
-              variant="structure"
+              // variant="structure"
             >
               <CheckCircle size={22} weight="fill" />
               {confirm}
-            </SaibWebButton>
-            <SaibWebButton
+            </button>
+            <button
               onClick={onClose}
               className="bg-red text-white"
-              variant="structure"
+              // variant="structure"
             >
               <XCircle size={22} weight="fill" />
               {cancel}
-            </SaibWebButton>
+            </button>
           </div>
         </div>
       </div>
