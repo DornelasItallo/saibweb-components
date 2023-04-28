@@ -1,3 +1,4 @@
+import '../src/styles/globals.css';
 export {
   SaibWebButton,
   SaibWebHeader,
