@@ -1,11 +1,11 @@
 {
   "name": "@saibweb/saibweb-components",
-  "version": "1.0.1-rc-17",
+  "version": "1.0.1-rc-18",
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files",
+    "build": "vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -20,12 +20,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
-    "react-toastify": "^9.1.2"
+    "react-toastify": "^9.1.2",
+    "vite-tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@storybook/addon-essentials": "^7.0.7",
     "@storybook/addon-interactions": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",
@@ -47,6 +49,7 @@
     "eslint-plugin-storybook": "^0.6.11",
     "postcss": "^8.4.23",
     "prop-types": "^15.8.1",
+    "rollup-plugin-typescript-paths": "^1.4.0",
     "storybook": "^7.0.7",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
