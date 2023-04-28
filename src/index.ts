@@ -1,4 +1,7 @@
 import '../src/styles/globals.css';
-import { SaibWebModal } from './components/SaibWebModal/';
+import { SaibWebButton } from './components/SaibWebButton';
+import { SaibWebHeader } from './components/SaibWebHeader';
+import { SaibWebInput } from './components/SaibWebInput';
+import { SaibWebModal } from './components/SaibWebModal';
 
-export { SaibWebModal };
+export { SaibWebModal, SaibWebButton, SaibWebInput, SaibWebHeader };

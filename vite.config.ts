@@ -15,7 +15,7 @@ const config = {
       name: '@saibweb/saibweb-components',
     },
     rollupOptions: {
-      external: [],
+      external: ['react'],
       plugins: [
         typescriptPaths({
           preserveExtensions: true,
@@ -26,6 +26,9 @@ const config = {
           outDir: 'dist',
         }),
       ],
+      output: {
+        sourcemapExcludeSources: true,
+      },
     },
   },
   plugins: [react(), viteTsconfigPaths()],
