@@ -1,7 +1,7 @@
 {
   "name": "@saibweb/saibweb-components",
-  "version": "1.0.1-rc-35",
-  "main": "src",
+  "version": "1.0.1-rc-36",
+  "main": "src/index",
   "type": "module",
   "scripts": {
     "dev": "vite",
