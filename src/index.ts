@@ -1,4 +1,9 @@
-export * from './components/SaibWebButton';
-export * from './components/SaibWebHeader';
-export * from './components/SaibWebInput';
-export * from './components/SaibWebModal';
+import SaibWebButton from './components/SaibWebButton';
+import SaibWebHeader from './components/SaibWebHeader';
+import SaibWebInput from './components/SaibWebInput';
+import SaibWebModal from './components/SaibWebModal';
+
+
+
+export {SaibWebButton, SaibWebHeader, SaibWebInput, SaibWebModal};
+
