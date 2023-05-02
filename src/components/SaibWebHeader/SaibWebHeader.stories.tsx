@@ -1,4 +1,5 @@
-import { SaibWebHeader } from './index';
+import SaibWebHeader from ".";
+
 
 export default {
   title: 'Components/Cabeçalho/Header',

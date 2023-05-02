@@ -1,6 +1,7 @@
 import { LockKeyOpen } from '@phosphor-icons/react';
+import SaibWebButton from '.';
+import React from 'react';
 
-import { SaibWebButton } from './index';
 
 export default {
   title: 'Components/Botões/Button',

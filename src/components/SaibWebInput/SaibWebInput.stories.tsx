@@ -1,6 +1,7 @@
 import { FormProvider, useForm } from 'react-hook-form';
+import SaibWebInput from '.';
+import React from 'react';
 
-import { SaibWebInput } from './index';
 
 export default {
   title: 'Components/Form/Input',
@@ -42,19 +43,20 @@ export default {
   },
 };
 
-const Template = (args) => {
+const Template = () => {
   const methods = useForm();
 
   return (
     <FormProvider {...methods}>
-      <SaibWebInput label="Label" name="input" {...args} />
+      <SaibWebInput label="Label" name={'input'}  />
     </FormProvider>
   );
 };
 
 export const Default = Template.bind({});
 
-Default.args = {
+Default.arguments = {
   label: 'Label do input',
   placeholder: 'Placeholder do input',
+
 };

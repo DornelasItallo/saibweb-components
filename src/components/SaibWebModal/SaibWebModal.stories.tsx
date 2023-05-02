@@ -1,6 +1,8 @@
+
 import React from 'react';
-import { SaibWebButton } from '../SaibWebButton';
-import { SaibWebModal } from './index';
+import SaibWebModal from '.';
+import SaibWebButton from '../SaibWebButton';
+
 
 export default {
   title: 'Components/Alertas/Modal',

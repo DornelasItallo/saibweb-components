@@ -2,6 +2,7 @@ import { Transition } from '@headlessui/react';
 import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import React from 'react';
 
+
 interface ModalProps {
   isOpen: boolean;
   title?: string;
