@@ -10,7 +10,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
-export function SaibWebButton({
+export default function SaibWebButton({
   className,
   disabled = false,
   variant = 'primary',

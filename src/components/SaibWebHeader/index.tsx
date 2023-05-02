@@ -9,7 +9,7 @@ interface HeaderProps {
   };
 }
 
-export function SaibWebHeader({ title, navigation }: HeaderProps) {
+export default function SaibWebHeader({ title, navigation }: HeaderProps) {
   return (
     <div className="bg-secondary-400 w-full border-b-[2px] border-bottom border-gray-500 py-2 px-8">
       <div className="gap-2 items-center flex">

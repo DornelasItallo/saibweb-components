@@ -7,7 +7,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
 }
 
-export function SaibWebInput({ label, name, ...props }: InputProps) {
+export default function SaibWebInput({ label, name, ...props }: InputProps) {
   const {
     register,
     formState: { errors },

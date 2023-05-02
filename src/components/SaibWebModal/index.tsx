@@ -12,7 +12,7 @@ interface ModalProps {
   cancel?: string;
 }
 
-export function SaibWebModal({
+export default function SaibWebModal({
   isOpen,
   title = 'Confirmação',
   message,
