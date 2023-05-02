@@ -1,9 +1,9 @@
 import typescript from '@rollup/plugin-typescript';
-import react from '@vitejs/plugin-react';
+
 import path from 'path';
 import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 import { defineConfig } from 'vite';
-import viteTsconfigPaths from 'vite-tsconfig-paths';
+
 
 const config = {
   build: {
@@ -31,7 +31,9 @@ const config = {
       },
     },
   },
-  plugins: [react(), viteTsconfigPaths()],
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
 };
 
 export default defineConfig(config);
