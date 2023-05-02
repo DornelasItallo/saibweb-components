@@ -1,6 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
 
-import path from 'path';
+
 import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 import { defineConfig } from 'vite';
 
@@ -11,7 +11,7 @@ const config = {
     minify: true,
     reportCompressedSize: true,
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: './src/index',
       name: '@saibweb/saibweb-components',
     },
     rollupOptions: {
