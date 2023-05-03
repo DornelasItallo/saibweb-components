@@ -1,11 +1,24 @@
-import typescript from '@rollup/plugin-typescript';
-
-
-import { typescriptPaths } from 'rollup-plugin-typescript-paths';
+import typescript from "rollup-plugin-typescript2";
+import react from '@vitejs/plugin-react'
+import dts from 'vite-plugin-dts'
+import tsConfigPaths from 'vite-tsconfig-paths'
 import { defineConfig } from 'vite';
+import packageJson from "./package.json";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import postcss from "rollup-plugin-postcss";
 
 
 const config = {
+  plugins: [
+    dts({
+      include: ['src/'],
+      insertTypesEntry: true,
+    }),
+    react(),
+    tsConfigPaths(),
+  ],
   build: {
     manifest: true,
     minify: true,
@@ -15,24 +28,29 @@ const config = {
       name: '@saibweb/saibweb-components',
     },
     rollupOptions: {
-      external: [],
+      input: "src/index.ts",
+      // output: [
+      //   {
+      //     file: packageJson.main,
+      //     format: "cjs",
+      //     sourcemap: true
+      //   },
+      //   {
+      //     file: packageJson.module,
+      //     format: "esm",
+      //     sourcemap: true
+      //   }
+      // ],
       plugins: [
-        typescriptPaths({
-          preserveExtensions: true,
-        }),
-        typescript({
-          sourceMap: false,
-          declaration: true,
-          outDir: 'dist',
-        }),
+        peerDepsExternal(),
+        // typescript({ useTsconfigDeclarationDir: true }),
+        resolve(),
+        commonjs(),
+        postcss({
+          extensions: ['.css']
+        })
       ],
-      output: {
-        sourcemapExcludeSources: true,
-      },
     },
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 };
 
