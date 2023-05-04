@@ -1,9 +1,7 @@
-import typescript from "rollup-plugin-typescript2";
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import tsConfigPaths from 'vite-tsconfig-paths'
 import { defineConfig } from 'vite';
-import packageJson from "./package.json";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -28,19 +26,6 @@ const config = {
       name: '@saibweb/saibweb-components',
     },
     rollupOptions: {
-      input: "src/index.ts",
-      // output: [
-      //   {
-      //     file: packageJson.main,
-      //     format: "cjs",
-      //     sourcemap: true
-      //   },
-      //   {
-      //     file: packageJson.module,
-      //     format: "esm",
-      //     sourcemap: true
-      //   }
-      // ],
       plugins: [
         peerDepsExternal(),
         // typescript({ useTsconfigDeclarationDir: true }),
