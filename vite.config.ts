@@ -1,22 +1,31 @@
-import react from '@vitejs/plugin-react'
-import dts from 'vite-plugin-dts'
-import tsConfigPaths from 'vite-tsconfig-paths'
+import react from '@vitejs/plugin-react';
+import path from 'node:path';
 import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
 
-
-const config = {
-  plugins: [
-    dts(),
-    react(),
-    tsConfigPaths(),
-  ],
-  build: {
-    reportCompressedSize: true,
-    lib: {
-      entry: './src/index',
-      name: '@saibweb/saibweb-components',
+export default defineConfig({
+    plugins: [
+        react(),
+        dts({
+            insertTypesEntry: true,
+        }),
+    ],
+    build: {
+        lib: {
+            entry: path.resolve(__dirname, 'src/index.ts'),
+            name: '@saibweb/saibweb-components',
+            formats: ['es', 'umd'],
+            fileName: (format) => `my-lib.${format}.js`,
+        },
+        rollupOptions: {
+            external: ['react', 'react-dom'],
+            output: {
+                globals: {
+                    react: 'React',
+                    'react-dom': 'ReactDOM',
+                    'tailwindcss/tailwind': 'tailwind',
+                },
+            },
+        },
     },
-  },
-};
-
-export default defineConfig(config);
+});

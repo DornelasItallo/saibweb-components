@@ -1,12 +1,9 @@
 {
   "name": "@saibweb/saibweb-components",
-  "version": "1.0.9",
-  "main": "index.ts",
-  "type": "module",
- 
+  "version": "1.0.10",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -57,5 +54,17 @@
     "vite": "^4.3.3",
     "vite-plugin-dts": "^2.3.0",
     "vite-tsconfig-paths": "^4.2.0"
-  }
+  },
+  "files": [
+    "dist"
+],
+"main": "./dist/saibweb-components.umd.js",
+"module": "./dist/saibweb-components.es.js",
+"types": "./dist/index.d.ts",
+"exports": {
+    ".": {
+        "import": "./dist/saibweb-components.es.js",
+        "require": "./dist/saibweb-components.umd.js"
+    }
+}
 }
