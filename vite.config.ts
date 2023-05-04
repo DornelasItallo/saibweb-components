@@ -15,7 +15,7 @@ export default defineConfig({
             entry: path.resolve(__dirname, 'src/index.ts'),
             name: '@saibweb/saibweb-components',
             formats: ['es', 'umd'],
-            fileName: (format) => `my-lib.${format}.js`,
+            fileName: (format) => `saibweb-components.${format}.js`,
         },
         rollupOptions: {
             external: ['react', 'react-dom'],
