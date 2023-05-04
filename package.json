@@ -1,7 +1,7 @@
 {
   "name": "@saibweb/saibweb-components",
-  "version": "1.0.6",
-  "main": "dist/index.js",
+  "version": "1.0.7",
+  "main": "src/index.ts",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "type": "module",
