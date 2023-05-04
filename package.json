@@ -1,6 +1,6 @@
 {
   "name": "@saibweb/saibweb-components",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -69,7 +69,7 @@
   "files": [
     "dist"
   ],
-  "main": "./index",
+  "main": "index",
   "module": "./dist/saibweb-components.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
